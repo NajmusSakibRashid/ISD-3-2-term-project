@@ -242,6 +242,7 @@ body {
 } */
 
 .post {
+    width:200px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -276,6 +277,10 @@ body {
 
 .post>button:hover {
     background-color: rgba(255, 0, 0, 1);
+}
+
+.post>ul{
+    height:200px;
 }
 
 .post-footer {
@@ -327,5 +332,5 @@ body {
 .post-container-header>hr{
     background-color: black;
     height:.25;
-    width:300px;
+    width:20%;
 }
