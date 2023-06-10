@@ -1,11 +1,11 @@
-ol{
-    padding:0px;
-    margin:0px;
+ol {
+    padding: 0px;
+    margin: 0px;
 }
 
-body{
-    margin-top:100px;
-    margin-left:50px;
+body {
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 /*Navigation*/
@@ -125,7 +125,7 @@ body{
 }
 
 .permanent-side-bar>i:hover {
-    scale:1.5;
+    scale: 1.5;
 }
 
 .side-bar {
@@ -136,10 +136,11 @@ body{
     width: 185px;
     background-color: lightgreen;
     padding: 0px;
+    z-index: 50;
 }
 
 .side-bar>ol {
-    width:120%;
+    width: 120%;
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -154,102 +155,177 @@ body{
     /* border-bottom-style: solid;
     border-color: darkgreen; */
     padding-left: 20px;
-    position:relative;
+    position: relative;
 }
 
-.side-bar>ol>li{
-    width:70%;
+.side-bar>ol>li {
+    width: 70%;
 }
 
-.side-bar li>ol{
-    position:absolute;
-    left:100%;
-    top:0px;
-    width:100%;
-    display:flex;
+.side-bar li>ol {
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     list-style-type: none;
     background-color: lightgreen;
-    opacity:0;
-    transition:all .5s ease;
+    opacity: 0;
+    transition: all .5s ease;
     pointer-events: none;
     /* border-style:solid; */
     /* border-color:darkgreen; */
     /* border-radius:25px; */
 }
 
-.side-bar li:hover>ol{
-    opacity:1;
+.side-bar li:hover>ol {
+    opacity: 1;
     pointer-events: all;
 }
 
-.side-bar li>ol>li:last-child{
-    border-style:none;
+.side-bar li>ol>li:last-child {
+    border-style: none;
 }
 
-.side-bar li>ol>li{
-    width:83%;
+.side-bar li>ol>li {
+    width: 83%;
 }
 
-.side-bar li:hover{
-    background-color:rgba(0,0,0,.2)
+.side-bar li:hover {
+    background-color: rgba(0, 0, 0, .2)
 }
 
 /*Job Post Container*/
 
-.job-post-container{
+.post-container {
     position:relative;
     display: flex;
-    flex-direction: column;
-    width:900px;
-    margin:20px;
-    margin-top:130px;
-}
-
-.side-bar:hover+.job-post-container{
-    z-index: -500;
-}
-
-.job-post{
-    border-style:solid;
-    border-width:.5px;
-    border-top-style:none;
-    border-color:rgba(0,0,0,.5);
-    padding:10px;
-}
-
-.job-post:hover{
-    background-color:rgba(0,100,0,.1);
-}
-
-.job-post-footer{
-    display:flex;
+    margin-left: 20px;
+    margin-right: 20px;
     justify-content: space-around;
     align-items: center;
 }
 
-.job-post-footer>i{
-    color:white;
-    font-size:20px;
-    background-color:rgba(120,120,120,.2);
-    width:50%;
-    display:flex;
+.post-container>button{
+    height: 20px;
+    color: green;
+    background-color: white;
+    border-width:2px;
+    border-color:green;
+    border-style: solid;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.post-container>button:hover{
+    color:rgb(197, 147, 0);
+    border-color:rgb(197, 147, 0)
+}
+
+/* @media screen and (max-width:600px) {
+    .post-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:900px) and (min-width:601px) {
+    .post-container{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:901px){
+    .post-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+} */
+
+.post {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position:relative;
+    margin:30px;
+    background-color: rgba(0, 100, 0, .1);
+}
+
+.post:hover {
+    background-color: rgba(0, 100, 0, .5);
+}
+
+.post>img {
+    width: 100%;
+    height:140px;
+}
+
+.post>.specifications {
+    margin: 10px;
+    color: rgba(0, 0, 0, .75);
+}
+
+.post>button {
+    background-color: rgba(255, 0, 0, .5);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.post>button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.post-footer>i {
+    color: white;
+    font-size: 20px;
+    background-color: rgba(120, 120, 120, .2);
+    width: 50%;
+    display: flex;
     justify-content: center;
-    padding-top:5px;
-    padding-bottom:5px;
-    border-radius:20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.post-footer>i:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.post-container-header {
+    padding: 10px;
+    /* border-style: solid;
+    border-width: .5px;
+    border-radius: 50px;
+    border-color: rgba(120, 120, 120, 0.5); */
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgba(100,100,0,.8);
+}
+
+.post-container-header>img{
+    width:30px;
     margin:10px;
 }
 
-.job-post-footer>i:hover{
-    background-color: rgba(0,0,0,.5);
+.post-container-header>p{
+    font-size: 30px;
 }
 
-.job-post-container-header{
-    padding:10px;
-    border-style:solid;
-    border-width:.5px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-color:rgba(120, 120, 120, 0.5);
+.post-container-header>hr{
+    background-color: black;
+    height:.25;
+    width:300px;
 }
