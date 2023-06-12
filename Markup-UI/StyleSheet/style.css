@@ -199,12 +199,16 @@ body {
 /*Job Post Container*/
 
 .post-container {
-    position:relative;
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.slide-container{
+    display: flex;
+    justify-content: space-around;
 }
 
 .post-container>button{
